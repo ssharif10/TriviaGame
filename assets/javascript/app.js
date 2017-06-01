@@ -3,9 +3,10 @@ var inCorrectCount = 0;
 var unAnsweredCount = 0;
 var sec = 40;
 var timer;
+var intervalID
 
 //Question array
-var quizList = [
+var questionsList = [
 	{	
 		name: "question1",
 		question: "1. Justin Bieber had three of the top five songs on the Billboard Hot 100 chart for January 2nd, 2016. Sorry, Love Yourself and...?",
@@ -69,9 +70,22 @@ var quizList = [
 ];
 
 //Timer Display
+
 function displayTime(){
-	$(".time-left").html("Time left<br>" + --sec + "<br>seconds");
+	$(".time-remaining").html("Time remaining<br>" + sec + "<br>seconds");
 }
+
+var windowTimeout = setTimeout(function(){
+        inner.html("Out of Time!");
+      }, 40000);
+
+function showQuestions() {
+	function run() {
+      intervalId = setInterval(decrement, 1000);
+
+}
+
+
 
 
 
